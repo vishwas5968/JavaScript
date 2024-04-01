@@ -14,10 +14,10 @@ let res = mathOperations(10, 20, function (a, b) {		//1
 })
 console.log(res) */
 
-let arr = [21, 5, 6, 2, 1]
-arr.forEach((e,i) => {
-    console.log(e , i)
-})
+// let arr = [21, 5, 6, 2, 1]
+// arr.forEach((e,i) => {
+//     console.log(e , i)
+// })
 
 //!Arrow Function
 /* let Triangle = (l, b) => {
@@ -25,3 +25,12 @@ arr.forEach((e,i) => {
 }
 console.log(Triangle(10, 20)) */
 
+function add() {
+    let counter=5
+    return function plus() {
+        console.log(counter += 1) ;
+    }
+    
+}
+let a = add()
+a()

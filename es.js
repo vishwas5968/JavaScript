@@ -43,7 +43,7 @@ console.log(2**2) //instead of math.pow()
 
 /*ES8*/
 
-//async, await
+// async, await
 
 //Object.values()
 /*
@@ -88,6 +88,6 @@ let maps = strings.map((value)=>{
 });
 console.log(maps)
 let flatMaps = strings.flatMap(value=>{
-     value.split("")
+    return value.split("")
 });
 console.log(flatMaps)

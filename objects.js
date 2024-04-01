@@ -52,20 +52,20 @@ let array = [10, 20, 30]
 let obj4 = Object.assign({}, array)	//Array → Object
 console.log(obj4)		//{0: 10, 1: 20, 2: 30} */
 
-let obj = {
-    Name: "Ranjan",
-    Id: 421,
-    Sal: `100000`,
-    address: {
-        city: 'Banglore',
-        State: 'Karnataka'
-    }
-}
-console.log(obj)
-let obj2 = Object.assign({}, obj)
-console.log(obj2)
-console.log("**********************")
-obj2.address.city = 'Kolkata'
-console.log(obj2)
-console.log(obj)
-console.log(obj == obj2)
+// let obj = {
+//     Name: "Ranjan",
+//     Id: 421,
+//     Sal: `100000`,
+//     address: {
+//         city: 'Banglore',
+//         State: 'Karnataka'
+//     }
+// }
+// console.log(obj)
+// let obj2 = Object.assign({}, obj)
+// console.log(obj2)
+// console.log("**********************")
+// obj2.address.city = 'Kolkata'
+// console.log(obj2)
+// console.log(obj)
+// console.log(obj == obj2)
