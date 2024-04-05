@@ -22,12 +22,20 @@ class CustomArray {
     }
 
     delete(index) {
+        if (index<0 || index>this.length)
+            return "Invalid index"
         const item = this.data[index];
-        this.shiftItems(index);
+        for (let i = index; i < this.length - 1; i++) {
+            this.data[i] = this.data[i + 1];
+        }
+        delete this.data[this.length - 1];
+        this.length--;
         return item;
     }
 
     shiftItems(index) {
+        if (index<0 || index>this.length)
+            return "Invalid index"
         for (let i = index; i < this.length - 1; i++) {
             this.data[i] = this.data[i + 1];
         }
@@ -50,8 +58,9 @@ const myArray = new CustomArray();
 myArray.push(2);
 myArray.push(1);
 myArray.push(3);
-console.log(myArray.get(1))//1
-myArray.print();//[2,1,3]
-console.log(myArray.pop())//3
-myArray.print();//[2,1]
-myArray.delete(0);//[1]
+// console.log(myArray.get(1))//1
+// myArray.print();//[2,1,3]
+// console.log(myArray.pop())//3
+// myArray.print();//[2,1]
+// myArray.delete(0);//[1]
+// myArray.print()

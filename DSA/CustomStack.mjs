@@ -1,10 +1,4 @@
-class Node {
-    constructor(data,next=null) {
-        this.data = data
-        this.next = next
-    }
-}
-
+import Node from "./Node.mjs"
 class CustomStack {
     constructor() {
         this.head=null
@@ -28,6 +22,7 @@ class CustomStack {
     pop(){
         if (!this.head){
             console.log("No values present in the List")
+            return
         }
         if (!this.head.next) {
             this.head = null;

@@ -25,12 +25,12 @@ console.log(res) */
 }
 console.log(Triangle(10, 20)) */
 
-function add() {
+var a=function () {
     let counter=5
-    return function plus() {
+    // return function plus() {
         console.log(counter += 1) ;
+        // }
+        
     }
-    
-}
-let a = add()
+console.log(a)
 a()

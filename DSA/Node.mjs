@@ -4,3 +4,4 @@ class Node {
         this.next = next
     }
 }
+export default Node
