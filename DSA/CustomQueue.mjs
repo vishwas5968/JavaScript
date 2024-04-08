@@ -46,3 +46,6 @@ queue.enqueue(2)
 queue.dequeue()
 queue.print()
 console.log(queue.size())
+
+
+export default CustomQueue
