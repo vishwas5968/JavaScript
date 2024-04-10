@@ -1,61 +1,61 @@
 import TreeNode from "./TreeNode.mjs";
 class CustomBinaryTree {
     constructor() {
-        this.root=null
+        this.root = null
     }
 
-    isEmpty(){
-        return this.root===null
+    isEmpty() {
+        return this.root === null
     }
 
-    add(value){
-        let node=new TreeNode(value)
-        if (this.isEmpty()){
-            this.root=node
+    add(value) {
+        let node = new TreeNode(value)
+        if (this.isEmpty()) {
+            this.root = node
             return
         }
         else
-            this.insertNode(this.root,node)
+            this.insertNode(this.root, node)
     }
 
-    insertNode(currentNode,newNode){
-        if (newNode.data>currentNode.data){
-            if (currentNode.right === null){
-                currentNode.right=newNode
+    insertNode(currentNode, newNode) {
+        if (newNode.data > currentNode.data) {
+            if (currentNode.right === null) {
+                currentNode.right = newNode
                 return;
             }
             else
-                this.insertNode(currentNode.right,newNode)
+                this.insertNode(currentNode.right, newNode)
         }
-        else if (newNode.data<currentNode.data){
-            if (currentNode.left === null){
-                currentNode.left=newNode
+        else if (newNode.data < currentNode.data) {
+            if (currentNode.left === null) {
+                currentNode.left = newNode
                 return;
             }
             else
-                this.insertNode(currentNode.left,newNode)
+                this.insertNode(currentNode.left, newNode)
         }
         else
             return;
     }
 
-    search(value,currentNode=this.root){
+    search(value, currentNode = this.root) {
         if (!this.root)
             return false
-        else if (typeof currentNode.data ==null)
+        else if (typeof currentNode.data == null)
             return false
         else {
-            if (value==currentNode.data)
+            if (value == currentNode.data)
                 return true
             else if (value > currentNode.left)
-                this.search(value,currentNode.right)
+                this.search(value, currentNode.right)
             else if (value < currentNode.data)
-                this.search(value,currentNode.left)
+                this.search(value, currentNode.left)
         }
     }
 
 
-    inOrderTraversal(currentNode=this.root){
+    inOrderTraversal(currentNode = this.root) {
         if (currentNode != null) {
             this.inOrderTraversal(currentNode.left)
             console.log(currentNode.data)
@@ -79,7 +79,7 @@ class CustomBinaryTree {
         }
     }
 }
-let tree=new CustomBinaryTree()
+let tree = new CustomBinaryTree()
 tree.add(10)
 tree.add(3)
 tree.add(25)

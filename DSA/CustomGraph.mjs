@@ -45,9 +45,8 @@ class CustomGraph {
                 visited[vertex] = true
                 result.push(vertex)
                 this.adjacencyList[vertex].forEach((neighbor) => {
-                    if (!visited[neighbor]) {
+                    if (!visited[neighbor])
                         queue.unshift(neighbor)
-                    }
                 })
             }
         }
@@ -58,6 +57,9 @@ class CustomGraph {
         for (const [vertex, edges] of Object.entries(this.adjacencyList)) {
             console.log(`${vertex} -> ${edges.join(", ")}`)
         }
+    }
+    print(n) {
+        console.log("Hello")
     }
 }
 const graph = new CustomGraph()
@@ -79,5 +81,6 @@ graph.addEdge("B", "D")
 graph.addEdge("C", "D")
 console.log("Graph:")
 graph.print()
-console.log(graph.dfsIterative("B"))
-console.log(graph.bfs("A"))
+graph.print(5)
+// console.log(graph.dfsIterative("B"))
+// console.log(graph.bfs("A"))
